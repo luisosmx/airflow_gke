@@ -29,7 +29,15 @@ $ kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
 
 # Una vez ejecutado ese comando nos dara una direccion como la de la imagen, la copiamos y la ejecutamos en una nueva ventana 
 
+![image](https://user-images.githubusercontent.com/119461863/226152020-eaa171da-3515-488f-892e-e2fe85f117b2.png)
+
+
 ![image](https://user-images.githubusercontent.com/119461863/226151316-d3e27213-02dd-473b-807b-e96a751f25c6.png)
+
+# Agregamos el username y password
+
+![image](https://user-images.githubusercontent.com/119461863/226152057-2f486c78-37fd-44fa-bc76-bb64df13c8b7.png)
+
 
 
 
