@@ -57,9 +57,20 @@ Lo abrimos y buscamos las siguientes lineas para modificar "CeleryExecutor" con 
 ![image](https://user-images.githubusercontent.com/119461863/226152288-37b1ad4e-a983-4441-8933-ce512ff05f57.png)
 ![image](https://user-images.githubusercontent.com/119461863/226152314-881389d1-2c21-4a6a-a3f1-fcae0e3b1a9e.png)
 
-
 ![image](https://user-images.githubusercontent.com/119461863/226152408-0acb0162-2742-4019-855f-7b30f3ac754e.png)
 ![image](https://user-images.githubusercontent.com/119461863/226152427-b3f73709-b214-4343-a3d8-febf94ea7acf.png)
+
+Guardamos cambios (ctrl + s) y posteriormente ejecutamos el siguiente comando en la terminal de wsl para 
+actualizar el cluster
+
+$ helm upgrade --install airflow apache-airflow/airflow -n airflow  \
+  -f values.yaml \
+  --debug
+ 
+ ![image](https://user-images.githubusercontent.com/119461863/226152927-ef289841-c4e7-4bbc-98da-b54cddfa3af0.png)
+
+
+
 
 
 
