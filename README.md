@@ -23,7 +23,7 @@ $ kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
 
 ![image](https://user-images.githubusercontent.com/119461863/226150985-f09c2508-9e81-4230-898b-c525400fd452.png)
 
-# Al dar clic nos abrira una ventana que contiene un comando, lo copiamos y lo ejecutamos en la terminal de wsl
+# Al dar clic nos abrira una ventana que contiene un comando, lo copiamos y lo ejecutamos en la terminal de wsl en vsc
 
 ![image](https://user-images.githubusercontent.com/119461863/226151117-0f5f309e-2b50-4005-b9aa-934b01cc270e.png)
 
@@ -38,6 +38,28 @@ $ kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow
 
 ![image](https://user-images.githubusercontent.com/119461863/226152057-2f486c78-37fd-44fa-bc76-bb64df13c8b7.png)
 
+# Configurando nuestra implementación de Airflow
+
+Para estos pasos es neceserio generar un archivo values.yaml de nuestro gráfico de Helm con el comando:
+
+$ helm show values apache-airflow/airflow > values.yaml
+
+en una nueva terminal de wsl
+
+![image](https://user-images.githubusercontent.com/119461863/226152522-330abf5b-b668-44e5-8767-432a4be1b217.png)
+
+Una vez ejecutado buscamos el archivo "values.yalm" en la parte izquierda de vsc 
+
+![image](https://user-images.githubusercontent.com/119461863/226152605-8704b4a5-248e-4dd9-9e7e-50820b2f9196.png)
+
+Lo abrimos y buscamos las siguientes lineas para modificar "CeleryExecutor" con "LocalExecutor". Reemplace el servicio "ClusterIP" con "LoadBalancer". (Estos servicios se encuentran aproximadamente en las lineas que muestran las imagenes)
+
+![image](https://user-images.githubusercontent.com/119461863/226152288-37b1ad4e-a983-4441-8933-ce512ff05f57.png)
+![image](https://user-images.githubusercontent.com/119461863/226152314-881389d1-2c21-4a6a-a3f1-fcae0e3b1a9e.png)
+
+
+![image](https://user-images.githubusercontent.com/119461863/226152408-0acb0162-2742-4019-855f-7b30f3ac754e.png)
+![image](https://user-images.githubusercontent.com/119461863/226152427-b3f73709-b214-4343-a3d8-febf94ea7acf.png)
 
 
 
