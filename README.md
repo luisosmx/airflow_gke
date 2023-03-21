@@ -1,13 +1,18 @@
 # airflow_gke
 
-# Para acceder a airflow mediante gke, es necesario tener creado un PROJECTO en gcp y despues ejecutamos los siguientes comandos en la CLOUD SHELL de gcp
-
-$ gcloud container clusters create airflow-cluster --machine-type n1-standard-4 --num-nodes 1 --region "us-central1-a"
-
-$ gcloud container clusters get-credentials airflow-cluster --region "us-central1-a"
-
-$ kubectl create namespace airflow
-
+### Para acceder a airflow mediante gke, es necesario tener creado un PROJECTO en gcp y despues ejecutamos los siguientes comandos en la CLOUD SHELL de gcp
+* Este código crea un clúster de Kubernetes en Google Cloud Platform.
+  ```bash
+  $ gcloud container clusters create airflow-cluster --machine-type n1-standard-4 --num-nodes 1 --region "us-central1-a"
+  ```
+* El código obtiene las credenciales de un cluster de Kubernetes en Google Cloud.
+  ```bash
+  $ gcloud container clusters get-credentials airflow-cluster --region "us-central1-a"
+  ```
+* Este código crea un namespace llamado "airflow" en el cluster de Kubernetes.
+  ```bash
+  $ kubectl create namespace airflow
+  ```
 $ helm repo add apache-airflow https://airflow.apache.org
 
 $ helm repo list
