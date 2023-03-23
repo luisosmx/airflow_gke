@@ -5,7 +5,7 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators import MultiplyBy5Operator
 
 def print_hello():
- return 'Hello Wolrd'
+ return 'Hello World'
 
 dag = DAG('hello_world', description='Hello world example', schedule_interval='0 12 * * *', start_date=datetime(2017, 3, 20), catchup=False)
 
